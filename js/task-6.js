@@ -32,13 +32,13 @@ function hendleClickDestroy(event) {
 }
 
 function handleInput(event) {
-  amount = event.currentTarget.value;
+  amount = userInput.value;
 }
 
-let boxsize = 0;
-let newDiv =``;
 function createBoxes(amount) {
-  insertBox.innerHTML = "";
+  let newDiv =``;
+  let boxsize = 0;
+  hendleClickDestroy();
   boxsize = 30;
   for (let i = 1; i <= amount; i += 1) {
     newDiv = `<div style="width: ${boxsize}px; height: ${boxsize}px; background: ${getRandomHexColor()}"></div>`;

@@ -1,14 +1,16 @@
 const userName = document.querySelector("#name-input");
+const nameOutput = document.querySelector("#name-output")
 
 userName.addEventListener("input", handleInput)
 
 function handleInput(event) {
+  
 const name = event.currentTarget.value
     const newName =`${name.trim()}`
     if (newName === "") {
-        document.querySelector("#name-output").innerHTML = "Anonymous"
+      nameOutput.innerHTML = "Anonymous"
     } else {
-  document.querySelector("#name-output").innerHTML = newName
+      nameOutput.innerHTML = newName
 }
 }
 
